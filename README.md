@@ -30,7 +30,7 @@ Here users can deploy and test smart contracts. They can be deployed to a local 
 ## 2. Solidity
 
 Solidity is a Smart Contract programming language. It is similar to C++.
-Create a new file named 4_NFT.sol in contracts folder. Paste this <a href="https://github.com/blockchain-lab-um/feri-nft/blob/main/contracts/0_FirstContract.sol">code</a>:
+Create a new file named 4_NFT.sol in contracts folder and paste following <a href="https://github.com/blockchain-lab-um/feri-nft/blob/main/contracts/0_FirstContract.sol">code</a>.
 
 ```
 // SPDX-License-Identifier: UNLICENSED
@@ -46,7 +46,7 @@ contract MyFirstSC {
 }
 ```
 
-Line by Line
+This is your very first Smart Contract. It's a very simple contract that logs some text when initialized. Now, let's go through this simple contract line by line:
 
 `// SPDX-License-Identifier: GPL-3.0`
 
@@ -70,7 +70,9 @@ contract MyFirstSC {
 
 Smart Contracts look like classes from other programming languages. They use word contract instead of class. Once this smart contract is initialized constructor function will run and text will print out in the conosole.
 
-To test this go to compiler view, compile smart contract. Then, go to Deploy view and press deploy. Text should display in the console below.
+Now that we understand what this smart contract does, let's test it. To do that, go to compiler view. Now press compile button, to compile the smart contract. Then, go to Deploy view and press deploy to deploy it. Note, you should have JavaScript VM (London) selected under Environment. This allows us to test our smart contracts on a local environment, before deploying it on a real blockchain.
+
+Once smart contract is deployed, the text should get logged in logs and just like that, we've deployed our very first smart contract on a local testnet.
 
 ## 3. NFT
 
