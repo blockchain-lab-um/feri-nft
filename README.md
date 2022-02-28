@@ -162,12 +162,16 @@ Solution for that is storing data “on-chain”. This means that the metadata, 
 
 A common way to store NFTs is using SVG. SVG is an image format, that is using code to build images.
 
-Example for black box with some white text in it:
+What our NFT will look like on OpenSea after it's deplyed:
 
-```<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 350 350">
+<img src="assets/feri-nft-workshop.svg">
+
+```
+// Example svg
+<svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 350 350">
     <style>.base { fill: white; font-family: serif; font-size: 14px; }</style>
     <rect width="100%" height="100%" fill="black" />
-    <text x="50%" y="50%" class="base" dominant-baseline="middle" text-anchor="middle">FERI NFT</text>
+    <text x="50%" y="50%" class="base" dominant-baseline="middle" text-anchor="middle">FERI WORKSHOP NFT</text>
 </svg>
 ```
 
@@ -179,35 +183,29 @@ First encode SVG image.
 
 `data:image/svg+xml;base64,INSERT_YOUR_BASE64_ENCODED_SVG_HERE`
 
-Ours looks like this:
-
-```data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHZpZXdCb3g9IjAgMCAzNTAgMzUwIj4KICAgIDxzdHlsZT4uYmFzZSB7IGZpbGw6IHdoaXRlOyBmb250LWZhbWlseTogc2VyaWY7IGZvbnQtc2l6ZTogMTRweDsgfTwvc3R5bGU+CiAgICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJibGFjayIgLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBjbGFzcz0iYmFzZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RkVSSSBORlQ8L3RleHQ+Cjwvc3ZnPgo=```
+You can find our encoded image [here](assets/encoded-image.txt).
 
 You can test this by pasting it in a new tab.
 
-Now that we have encoded image we can add this to the JSON instead of a link to the image.
+Now that we have an encoded image we can add this to the JSON instead of a link to the image.
 
 Our JSON looks like this:
 
 ```
 {
-    "name": "FERI NFT",
-    "description": "Owned by a smart individual",
-    "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaW5ZTWluIG1lZXQiIHZpZXdCb3g9IjAgMCAzNTAgMzUwIj4KICAgIDxzdHlsZT4uYmFzZSB7IGZpbGw6IHdoaXRlOyBmb250LWZhbWlseTogc2VyaWY7IGZvbnQtc2l6ZTogMTRweDsgfTwvc3R5bGU+CiAgICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJibGFjayIgLz4KICAgIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBjbGFzcz0iYmFzZSIgZG9taW5hbnQtYmFzZWxpbmU9Im1pZGRsZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RkVSSSBORlQ8L3RleHQ+Cjwvc3ZnPgo="
+    "name": "FERI WORKSHOP NFT",
+    "description": "Owned by a smart FERI WORKSHOP participant.",
+    "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5v..."
 }
 ```
 
 Great, we no longer need an external server to store our image, however this JSON still needs to get stored somewhere.
 
-We repeat the process, except this time we use whole JSON
+We repeat the process, except this time we use the whole JSON
 
-‘data:application/json;base64,INSERT_YOUR_BASE64_ENCODED_JSON_HERE’
+`data:application/json;base64,INSERT_YOUR_BASE64_ENCODED_JSON_HERE`
 
-Our encoded JSON looks like this:
-
-```
-data:application/json;base64,ewogICAgIm5hbWUiOiAiRkVSSSBORlQiLAogICAgImRlc2NyaXB0aW9uIjogIk93bmVkIGJ5IGEgc21hcnQgaW5kaXZpZHVhbCIsCiAgICAiaW1hZ2UiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpSUhCeVpYTmxjblpsUVhOd1pXTjBVbUYwYVc4OUluaE5hVzVaVFdsdUlHMWxaWFFpSUhacFpYZENiM2c5SWpBZ01DQXpOVEFnTXpVd0lqNEtJQ0FnSUR4emRIbHNaVDR1WW1GelpTQjdJR1pwYkd3NklIZG9hWFJsT3lCbWIyNTBMV1poYldsc2VUb2djMlZ5YVdZN0lHWnZiblF0YzJsNlpUb2dNVFJ3ZURzZ2ZUd3ZjM1I1YkdVK0NpQWdJQ0E4Y21WamRDQjNhV1IwYUQwaU1UQXdKU0lnYUdWcFoyaDBQU0l4TURBbElpQm1hV3hzUFNKaWJHRmpheUlnTHo0S0lDQWdJRHgwWlhoMElIZzlJalV3SlNJZ2VUMGlOVEFsSWlCamJHRnpjejBpWW1GelpTSWdaRzl0YVc1aGJuUXRZbUZ6Wld4cGJtVTlJbTFwWkdSc1pTSWdkR1Y0ZEMxaGJtTm9iM0k5SW0xcFpHUnNaU0krUmtWU1NTQk9SbFE4TDNSbGVIUStDand2YzNablBnbz0iCn0K
-```
+You can find our encoded JSON [here](assets/encoded-json.txt).
 
 Test this by pasting it in a new tab.
 
