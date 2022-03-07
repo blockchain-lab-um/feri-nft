@@ -116,7 +116,7 @@ contract MyFirstNFT is ERC721URIStorage {
 }
 ```
 
-OpenZeppelin implemented ERC721 standard and allows us to use their implementation and build on top of it. This way ERC721 remains standarized and it also means we dont have to write boilerplate code every time. OpenZeppelin Smart contracts are also battle tested and use the best and most secure practices.
+OpenZeppelin implemented <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol">ERC721</a> standard and allows us to use their implementation and build on top of it. This way ERC721 remains standarized and it also means we dont have to write boilerplate code every time. OpenZeppelin Smart contracts are also battle tested and use the best and most secure practices.
 
 Line by Line
 
