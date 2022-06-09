@@ -150,7 +150,7 @@ Now, let's deploy our very first NFT on Rinkeby.
 5. Confirm in Metamask
 6. Use makeNFT function under deployed contracts
 7. Confirm in Metamask
-8. Use metamask address on testnets.opensea.io to view minted NFTs.
+8. Use metamask address on https://testnets.opensea.io/ to view minted NFTs.
 
 <a href="https://github.com/blockchain-lab-um/feri-nft/blob/main/contracts/2_FinalOffChain.sol">Final code</a>
 
