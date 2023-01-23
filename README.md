@@ -2,10 +2,10 @@
 
 ## 0. Requirements
 
-Metamask wallet with testnet ETH on Rinkeby.
+Metamask wallet with testnet ETH on Goerli.
 
 Metamask: https://metamask.io 
-Get testnet ETH: https://faucets.chain.link/rinkeby 
+Get testnet ETH: https://goerli-faucet.pk910.de/
 
 ## 1. REMIX
 
