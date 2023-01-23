@@ -150,9 +150,9 @@ Change _setTokenURI function to:
 
 `_setTokenURI(newItemId, "INSERT_YOUR_JSON_URL_HERE");`
 
-Now, let's deploy our very first NFT on Rinkeby.
+Now, let's deploy our very first NFT on Goerli.
 
-1. Set metamask network to rinkeby
+1. Set metamask network to goerli
 2. Set environment in remix to injected web3
 3. Select 4_NFT.sol
 4. Deploy
@@ -223,9 +223,9 @@ Change _setTokenURI function to:
 
 `_setTokenURI(newItemId, "INSERT_YOUR_BASE64_ENCODED_JSON_HERE");`
 
-Then deploy your NFT on rinkeby.
+Then deploy your NFT on goerli.
 
-1. Set metamask network to rinkeby
+1. Set metamask network to goerli
 2. Set environment in remix to injected web3
 3. Select 4_NFT.sol
 4. Deploy
