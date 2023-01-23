@@ -11,19 +11,28 @@ Get testnet ETH: https://goerli-faucet.pk910.de/
 
 IDE for Solidity. Go to https://remix.ethereum.org/ 
 
-5 Views: File Explorer, Solidity Compiler, Deploy and Run View, Stats and Plugins
+5 Views: 
+- File Explorer,
+- Search in Files,
+- Solidity Compiler,
+- Deploy and Run Transactions,
+- Plugins
 
 ### 1.1 File Explorer
 
-Comes with 3 default Smart Contracts stored in contracts folder.
+Comes with 3 default Smart Contracts stored in contracts folder. We can delete them, since we are developing our own smart contract.
 
-### 1.2 Solidity Compiler
+### 1.2 Search in Files
+
+We can search for any word, variable, method etc. in all our files.
+
+### 1.3 Solidity Compiler
 
 User can choose language and version here. We'll be using Solidity 8.0.0. User can also choose EVM (Ethereum Virtual Machine) version. We'll be going with default.
 Under configuration check auto compile, which will automatically compile code after every change. We'll be also using option enable optimization.
 Once code is compiled user can also copy ABI (human readable version of Bytecode) and Bytecode (code that lives on blockchain).
 
-### 1.3 Deploy and Run
+### 1.4 Deploy and Run Transactions
 
 Here users can deploy and test smart contracts. They can be deployed to a local testnet or to a mainnet. Users can also test functions of their smart contracts here.
 
