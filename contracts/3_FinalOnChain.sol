@@ -1,4 +1,4 @@
-pragma solidity ^0.8.0;
+pragma solidity >=0.8.24;
 
 // Import OpenZeppelin ERC721 contract and Counter contract
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
