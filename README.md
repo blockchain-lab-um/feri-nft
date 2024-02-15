@@ -2,10 +2,11 @@
 
 ## 0. Requirements
 
-Metamask wallet with testnet ETH on Goerli.
+Metamask wallet with testnet ETH on Sepolia.
 
-Metamask: https://metamask.io 
-Get testnet ETH: https://goerli-faucet.pk910.de/
+Metamask: https://metamask.io
+
+Get testnet ETH: https://sepolia-faucet.pk910.de/
 
 ## 1. REMIX
 
@@ -28,7 +29,7 @@ We can search for any word, variable, method etc. in all our files.
 
 ### 1.3 Solidity Compiler
 
-User can choose language and version here. We'll be using Solidity 8.0.0. User can also choose EVM (Ethereum Virtual Machine) version. We'll be going with default.
+User can choose language and version here. We'll be using Solidity 0.8.24. User can also choose EVM (Ethereum Virtual Machine) version. We'll be going with default.
 Under configuration check auto compile, which will automatically compile code after every change. We'll be also using option enable optimization.
 Once code is compiled user can also copy ABI (human readable version of Bytecode) and Bytecode (code that lives on blockchain).
 
@@ -44,7 +45,7 @@ Create a new file named 4_NFT.sol in contracts folder and paste following <a hre
 ```
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.8.0;
+pragma solidity >=0.8.24;
 
 import "hardhat/console.sol";
 
@@ -89,7 +90,7 @@ ERC721 Standard...
 
 <a href="https://github.com/blockchain-lab-um/feri-nft/blob/main/contracts/1_FirstNFT.sol">code</a>
 ```
-pragma solidity ^0.8.0;
+pragma solidity >=0.8.24;
 
 // Import OpenZeppelin ERC721 contract and Counter contract
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
@@ -150,9 +151,9 @@ Change _setTokenURI function to:
 
 `_setTokenURI(newItemId, "INSERT_YOUR_JSON_URL_HERE");`
 
-Now, let's deploy our very first NFT on Goerli.
+Now, let's deploy our very first NFT on Sepolia.
 
-1. Set metamask network to goerli
+1. Set metamask network to sepolia
 2. Set environment in remix to injected web3
 3. Select 4_NFT.sol
 4. Deploy
@@ -223,9 +224,9 @@ Change _setTokenURI function to:
 
 `_setTokenURI(newItemId, "INSERT_YOUR_BASE64_ENCODED_JSON_HERE");`
 
-Then deploy your NFT on goerli.
+Then deploy your NFT on sepolia.
 
-1. Set metamask network to goerli
+1. Set metamask network to sepolia
 2. Set environment in remix to injected web3
 3. Select 4_NFT.sol
 4. Deploy
