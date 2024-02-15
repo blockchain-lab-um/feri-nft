@@ -6,6 +6,12 @@ Metamask wallet with testnet ETH (named MATIC) on Polygon Mumbai.
 
 Metamask: https://metamask.io
 
+Add Polygon Mumbai to MetaMask
+1. Go to https://chainlist.org/chain/80001
+2. Connect Wallet
+3. Add to MetaMask
+4. Confirm
+
 Get testnet ETH: https://www.alchemy.com/faucets/polygon-mumbai
 
 ## 1. REMIX
