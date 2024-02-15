@@ -2,11 +2,11 @@
 
 ## 0. Requirements
 
-Metamask wallet with testnet ETH on Sepolia.
+Metamask wallet with testnet ETH (named MATIC) on Polygon Mumbai.
 
 Metamask: https://metamask.io
 
-Get testnet ETH: https://sepolia-faucet.pk910.de/
+Get testnet ETH: https://www.alchemy.com/faucets/polygon-mumbai
 
 ## 1. REMIX
 
@@ -151,9 +151,9 @@ Change _setTokenURI function to:
 
 `_setTokenURI(newItemId, "INSERT_YOUR_JSON_URL_HERE");`
 
-Now, let's deploy our very first NFT on Sepolia.
+Now, let's deploy our very first NFT on Polygon Mumbai.
 
-1. Set metamask network to sepolia
+1. Set metamask network to Polygon Mumbai
 2. Set environment in remix to injected web3
 3. Select 4_NFT.sol
 4. Deploy
@@ -224,9 +224,9 @@ Change _setTokenURI function to:
 
 `_setTokenURI(newItemId, "INSERT_YOUR_BASE64_ENCODED_JSON_HERE");`
 
-Then deploy your NFT on sepolia.
+Then deploy your NFT on Polygon Mumbai.
 
-1. Set metamask network to sepolia
+1. Set metamask network to Polygon Mumbai.
 2. Set environment in remix to injected web3
 3. Select 4_NFT.sol
 4. Deploy
