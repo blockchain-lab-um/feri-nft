@@ -49,7 +49,7 @@ Solidity is a Smart Contract programming language. It is similar to C++.
 Create a new file named 4_NFT.sol in contracts folder and paste following <a href="https://github.com/blockchain-lab-um/feri-nft/blob/main/contracts/0_FirstContract.sol">code</a>.
 
 ```
-// SPDX-License-Identifier: UNLICENSED
+// SPDX-License-Identifier: UNLICENSE
 
 pragma solidity >=0.8.24;
 
@@ -64,7 +64,7 @@ contract MyFirstSC {
 
 This is your very first Smart Contract. It's a very simple contract that logs some text when initialized. Now, let's go through this simple contract line by line:
 
-`// SPDX-License-Identifier: GPL-3.0`
+`// SPDX-License-Identifier: GPL-3.0-only`
 
 Just a fancy comment.  It's called an "SPDX license identifier", You can read more about that here (https://spdx.org/licenses/).
 
@@ -96,6 +96,8 @@ ERC721 Standard...
 
 <a href="https://github.com/blockchain-lab-um/feri-nft/blob/main/contracts/1_FirstNFT.sol">code</a>
 ```
+// SPDX-License-Identifier: UNLICENSE
+
 pragma solidity >=0.8.24;
 
 // Import OpenZeppelin ERC721 contract and Counter contract
@@ -134,10 +136,6 @@ contract MyFirstNFT is ERC721URIStorage {
 
 OpenZeppelin implemented <a href="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol">ERC721</a> standard and allows us to use their implementation and build on top of it. This way ERC721 remains standarized and it also means we dont have to write boilerplate code every time. OpenZeppelin Smart contracts are also battle tested and use the best and most secure practices.
 
-Line by Line
-
-…
-
 ### 3.1 Off-chain
 
 tokenURI is where the actual NFT data lives and is linked to a JSON file called the metadata. 
@@ -160,7 +158,7 @@ Change _setTokenURI function to:
 Now, let's deploy our very first NFT on Polygon Mumbai.
 
 1. Set metamask network to Polygon Mumbai
-2. Set environment in remix to injected web3
+2. Set environment in remix to Injected Provider - MetaMask
 3. Select 4_NFT.sol
 4. Deploy
 5. Confirm in Metamask
@@ -228,7 +226,7 @@ Test this by pasting it in a new tab.
 
 Change _setTokenURI function to:
 
-`_setTokenURI(newItemId, "INSERT_YOUR_BASE64_ENCODED_JSON_HERE");`
+`_setTokenURI(newItemId, "data:application/json;base64,INSERT_YOUR_BASE64_ENCODED_JSON_HERE");`
 
 Then deploy your NFT on Polygon Mumbai.
 
