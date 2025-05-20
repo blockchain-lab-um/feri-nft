@@ -6,17 +6,17 @@ Metamask wallet with testnet ETH (named MATIC) on Polygon Mumbai.
 
 Metamask: https://metamask.io
 
-Add Polygon Mumbai to MetaMask
-1. Go to https://chainlist.org/chain/80001
-2. Connect Wallet
+Add Base Sepolia to MetaMask
+1. Go to https://sepolia.basescan.org/
+2. Click "Add Base Sepolia Network" at the bottom of the page
 3. Add to MetaMask
 4. Confirm
 
-Get testnet ETH: https://www.alchemy.com/faucets/polygon-mumbai
+Get testnet ETH: https://www.alchemy.com/faucets/base-sepolia
 
 ## 1. REMIX
 
-IDE for Solidity. Go to https://remix.ethereum.org/ 
+IDE for Solidity. Go to https://remix.ethereum.org/
 
 5 Views: 
 - File Explorer,
