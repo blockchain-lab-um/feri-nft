@@ -2,7 +2,7 @@
 
 ## 0. Requirements
 
-Metamask wallet with testnet ETH (named MATIC) on Polygon Mumbai.
+Metamask wallet with testnet ETH on Base Sepolia.
 
 Metamask: https://metamask.io
 
@@ -155,9 +155,9 @@ Change _setTokenURI function to:
 
 `_setTokenURI(newItemId, "INSERT_YOUR_JSON_URL_HERE");`
 
-Now, let's deploy our very first NFT on Polygon Mumbai.
+Now, let's deploy our very first NFT on Base Sepolia.
 
-1. Set metamask network to Polygon Mumbai
+1. Set metamask network to Base Sepolia
 2. Set environment in remix to Injected Provider - MetaMask
 3. Select 4_NFT.sol
 4. Deploy
@@ -228,9 +228,9 @@ Change _setTokenURI function to:
 
 `_setTokenURI(newItemId, "data:application/json;base64,INSERT_YOUR_BASE64_ENCODED_JSON_HERE");`
 
-Then deploy your NFT on Polygon Mumbai.
+Then deploy your NFT on Base Sepolia.
 
-1. Set metamask network to Polygon Mumbai.
+1. Set metamask network to Base Sepolia.
 2. Set environment in remix to injected web3
 3. Select 4_NFT.sol
 4. Deploy
